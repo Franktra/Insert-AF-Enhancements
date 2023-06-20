@@ -105,7 +105,7 @@ This section focuses on how experienced engineers and software developers can in
 - Installation of necessary Python libraries
 
 # Action Framework Guide
-...
+
 
 ## For Programmers <a name="for-programmers"></a>
 
@@ -113,22 +113,10 @@ This section focuses on how experienced engineers and software developers can in
 For programmers who want to interact with Large Language Models like ChatGPT programmatically, using APIs and setting parameters to refine and control the model's responses.
 
 ### Example Code Snippets:
-### Example Code Snippets:
+
 
 #### Setting Parameters for API calls
-```python
-# Action Framework Guide
-...
 
-## For Programmers
-
-### Introduction:
-
-For programmers who want to interact with Large Language Models like ChatGPT programmatically, using APIs and setting parameters to refine and control the model's responses.
-
-### Example Code Snippets:
-
-#### Setting Parameters for API calls
 
 ```python
 import openai
@@ -141,8 +129,35 @@ openai.Completion.create(
     stop=None,
     temperature=0.7,
     top_p=1,
-)```
+)
+```
 
+#### Iteratively refining prompts using Python
 
+```python
+import openai
+
+prompt = "Tell me about renewable energy sources."
+num_iterations = 3
+
+for i in range(num_iterations):
+    response = openai.Completion.create(engine="davinci-codex", prompt=prompt, max_tokens=50)
+    output_text = response.choices[0].text
+    print(output_text)
+    
+    prompt = "Tell me more about how " + output_text.split()[-1] + " are used in renewable energy."
+   
+  ```
+ #### Using Python to challenge the model  
+```python
+import openai
+
+response = openai.Completion.create(
+    engine="davinci-codex",
+    prompt="I challenge you to write a poem about the universe in the style of Shakespeare.",
+    max_tokens=100,
+)
+print(response.choices[0].text)
+````
 
 
