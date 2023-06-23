@@ -1,12 +1,13 @@
 # Insert-AF-Enhancements
- Action Framework- enhancement hacks
-"Show me your work"
+ **Action Framework- enhancement hacks**
+
+**"Show me your work"**
 
 Further leverage for LLM interaction: When users are interacting with an LLM like ChatGPT for solving mathematical or logical problems, asking it to “show its work” can be invaluable. This allows users to not just receive the answer but also understand the steps involved, which is crucial for learning and verification.
 
 Contexts: Education, self-learning, homework assistance.
 
-"Provide your reasoning"
+**"Provide your reasoning"**
 
 Further leverage for LLM interaction: When an LLM provides an answer, especially in scenarios where multiple perspectives or complex factors are involved, asking for the reasoning behind the answer can help users understand the underlying logic. This is useful for comprehending complex responses and evaluating the information provided.
 
